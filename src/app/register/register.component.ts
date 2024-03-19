@@ -21,7 +21,7 @@ export class RegisterComponent {
 
     const { username, email, password } = this.form;
 
-    this.authService.retister(username, email, password).subscribe(
+    this.authService.retister({ username, email, password }).subscribe(
       {
         next: (data) => {
           console.log(data)
